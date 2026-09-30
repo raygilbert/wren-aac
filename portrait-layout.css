@@ -1,0 +1,40 @@
+/* Keep the board's configured rows/columns and reading order on small screens. */
+@media (max-width: 600px) {
+  .app-header {
+    padding: 16px 16px 6px;
+  }
+
+  .board-view {
+    gap: 8px;
+    padding: 16px 12px 32px;
+  }
+
+  .board-view > .tile,
+  .board-view > .empty-cell {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 112px;
+    aspect-ratio: auto;
+    padding: 12px 6px;
+    border-radius: 16px;
+  }
+
+  .board-view > .tile {
+    gap: 6px;
+  }
+
+  .board-view > .tile > .tile-image {
+    width: min(64px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+  }
+
+  .board-view > .tile > .tile-label {
+    max-width: 100%;
+    font-size: clamp(14px, 3.5vw, 18px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    flex-shrink: 0;
+  }
+}
